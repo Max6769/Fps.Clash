@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Improved Clash-Style FPS Prototype</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <div class="panel" id="characterPanel">
+      <h2>Choose Character</h2>
+      <div class="chars">
+        <button class="charBtn selected" data-char="knight">Knight</button>
+        <button class="charBtn" data-char="archer">Archer</button>
+        <button class="charBtn" data-char="wizard">Wizard</button>
+        <button class="charBtn" data-char="giant">Giant</button>
+      </div>
+      <div class="controls">
+        <button id="spawnBtn" class="primary">Spawn / Respawn</button>
+        <button id="waveBtn">Spawn Wave</button>
+      </div>
+      <div class="note">Click canvas to lock pointer. Left-click to shoot. Press <strong>1</strong> to use ability.</div>
+    </div>
+
+    <div class="panel" id="statusPanel">
+      <div class="statusRow">HP: <span id="hp">0</span>/<span id="maxHp">0</span></div>
+      <div class="statusRow">Ability: <span id="abilityName">-</span> (<span id="cd">0</span>s)</div>
+      <div class="statusRow">Enemies: <span id="enemyCount">0</span></div>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.156.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.156.0/examples/js/controls/PointerLockControls.js"></script>
+
+  <!-- Main inline script to initialize and load secondary script -->
+  <script>
+    // Make sure the page is ready before loading heavy script
+    window.addEventListener('load', () => {
+      const s = document.createElement('script');
+      s.src = 'script.js';
+      document.body.appendChild(s);
+    });
+  </script>
+</body>
+</html>
