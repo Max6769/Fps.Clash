@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clash-Style FPS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="startScreen" class="overlay active">
+    <div class="menu-container">
+      <h1 class="title">⚔️ Clash-Style FPS ⚔️</h1>
+      <div class="character-select">
+        <button class="charBtn" data-char="knight">Knight</button>
+        <button class="charBtn" data-char="archer">Archer</button>
+        <button class="charBtn" data-char="wizard">Wizard</button>
+      </div>
+      <button id="startGame" class="main-btn">Start Battle</button>
+    </div>
+  </div>
+
+  <!-- In-Game UI -->
+  <div id="gameMenu" class="overlay hidden">
+    <div class="hud-panel">
+      <h2>Select Character</h2>
+      <div id="charButtons">
+        <button class="charBtn" data-char="knight">Knight</button>
+        <button class="charBtn" data-char="archer">Archer</button>
+        <button class="charBtn" data-char="wizard">Wizard</button>
+      </div>
+      <button id="spawnBtn" class="main-btn">Spawn</button>
+      <button id="waveBtn" class="main-btn">Next Wave</button>
+    </div>
+  </div>
+
+  <!-- Canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
