@@ -1,8 +1,0 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body,html { width: 100%; height: 100%; overflow: hidden; font-family: Arial, sans-serif; background: #1b1f2a; color: #e6eef8; }
-#gameCanvas { display:block; width:100vw; height:100vh; }
-#hud { position: absolute; top: 10px; left: 10px; z-index: 10; background: rgba(0,0,0,0.35); padding: 10px; border-radius: 8px; }
-#characterSelect { margin-bottom: 8px; }
-#status { margin-bottom: 8px; }
-#help { font-size: 12px; opacity: 0.85; }
-button, select { padding: 6px 8px; margin-left:6px; }
