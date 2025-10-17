@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Clash-Style FPS — Fixed v2</title>
+  <title>Clash-Style FPS v3</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/PointerLockControls.js"></script>
 </head>
 <body>
-  <!-- Loading overlay (shows until assets ready) -->
+  <!-- Loading overlay -->
   <div id="loadingOverlay" class="overlay active">
     <div class="loaderBox">
       <div class="spinner"></div>
@@ -18,10 +18,10 @@
   </div>
 
   <!-- Start Screen -->
-  <div id="startScreen" class="overlay">
+  <div id="startScreen" class="overlay hidden">
     <div class="menuBox">
       <h1 class="gameTitle">⚔️ Clash-Style FPS</h1>
-      <p class="lead">Pick a champion and start the battle</p>
+      <p class="lead">Select your hero and enter the arena</p>
       <div id="startCharRow" class="charRow">
         <button class="charBtn" data-char="knight">Knight</button>
         <button class="charBtn" data-char="archer">Archer</button>
@@ -30,12 +30,11 @@
       </div>
       <div class="controlsRow">
         <button id="startBattle" class="mainBtn">Start Battle</button>
-        <button id="skipIntro" class="linkBtn">Skip Intro</button>
       </div>
     </div>
   </div>
 
-  <!-- Lobby / Menu that stays until spawn clicked -->
+  <!-- Lobby -->
   <div id="lobby" class="overlay hidden">
     <div class="menuBox small">
       <h2>Battle Lobby</h2>
@@ -49,11 +48,11 @@
         <button id="spawnBtn" class="mainBtn">Spawn / Respawn</button>
         <button id="waveBtn" class="altBtn">Spawn Wave</button>
       </div>
-      <div class="hint">Click the canvas after spawning to lock pointer. Press <kbd>1</kbd> for ability, <kbd>R</kbd> to respawn.</div>
+      <div class="hint">Click the canvas after spawning to lock pointer.</div>
     </div>
   </div>
 
-  <!-- In-game HUD -->
+  <!-- HUD -->
   <div id="hud" class="hud hidden">
     <div class="hp">HP: <span id="hp">0</span>/<span id="maxHp">0</span></div>
     <div class="ability">Ability: <span id="abilityName">-</span> (<span id="cd">0</span>s)</div>
@@ -61,7 +60,6 @@
   </div>
 
   <canvas id="gameCanvas" tabindex="0"></canvas>
-
   <script src="script.js"></script>
 </body>
 </html>
