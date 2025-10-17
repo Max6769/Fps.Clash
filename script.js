@@ -15,7 +15,7 @@
   const cdEl = document.getElementById('cd');
   const enemyCountEl = document.getElementById('enemyCount');
 
-  let state = "loading";
+  let state = "start";
   let selectedChar = "knight";
   let player = null;
   let enemies = [];
@@ -164,9 +164,6 @@
     setupUI();
     animate();
     // Force start screen after short load
-    setTimeout(() => {
-      setState("start");
-    }, 800);
   }
 
   window.addEventListener("DOMContentLoaded", init);
